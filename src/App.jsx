@@ -1,7 +1,6 @@
-// src/App.jsx
 import { useState, useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import router from './routes';
+import router from './routes/index.jsx'; // Add explicit file extension
 import Loader from './components/Loader';
 
 function App() {

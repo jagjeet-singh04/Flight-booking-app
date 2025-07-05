@@ -1,4 +1,3 @@
-// src/routes/index.jsx
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout.jsx';
 import Home from '../pages/Home.jsx';
@@ -16,13 +15,35 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      { index: true, element: <Home /> },
-      { path: 'search', element: <SearchResults /> },
-      { path: 'flight/:id', element: <FlightDetails /> },
-      { path: 'booking', element: <Booking /> },
-      { path: 'confirmation', element: <Confirmation /> },
-      { path: 'bookings', element: <MyBookings /> },
-      { path: 'support', element: <Support /> }
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: 'search',
+        element: <SearchResults />
+      },
+      {
+        path: 'flight/:id',
+        element: <FlightDetails />
+      },
+      {
+        path: 'booking',
+        element: <Booking />
+      },
+      {
+        path: 'confirmation',
+        element: <Confirmation />
+      },
+      {
+        path: 'bookings',
+        element: <MyBookings />
+      },
+      {
+        path: 'support',
+        element: <Support />
+      },
+      // REMOVED DUPLICATE SEARCH ROUTE
     ]
   }
 ]);
