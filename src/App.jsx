@@ -1,3 +1,4 @@
+// src/App.jsx
 import { useState, useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
@@ -7,10 +8,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate initial loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Matches loader simulation time
+    }, 5000);
     
     return () => clearTimeout(timer);
   }, []);
