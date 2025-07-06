@@ -6,4 +6,10 @@ export default defineConfig({
   plugins: [
     tailwindcss() , 
     react()],
+    resolve: {
+    alias: {
+      // Add this alias to fix path resolution
+      '@routes': '/src/routes'
+    }
+  }
 })

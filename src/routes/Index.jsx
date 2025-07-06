@@ -6,7 +6,7 @@ import FlightDetails from '../pages/FlightDetails.jsx';
 import Booking from '../pages/Booking.jsx';
 import Confirmation from '../pages/Confirmation.jsx';
 import MyBookings from '../pages/MyBookings.jsx';
-import Support from '../pages/Support.jsx';
+import Support from '../pages/Support.jsx'; // Consistent casing
 import NotFound from '../pages/NotFound.jsx';
 
 const router = createBrowserRouter([
