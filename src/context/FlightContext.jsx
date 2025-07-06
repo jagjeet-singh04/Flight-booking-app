@@ -1,7 +1,6 @@
 import { createContext, useState, useContext } from 'react';
 
 const FlightContext = createContext();
-
 export const useFlightContext = () => useContext(FlightContext);
 
 export const FlightProvider = ({ children }) => {

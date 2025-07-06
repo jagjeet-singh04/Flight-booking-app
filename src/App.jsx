@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import router from './routes/index'; // Remove .jsx extension
+import router from './routes'; // Remove "/index" from the import
 import Loader from './components/Loader';
 
 function App() {

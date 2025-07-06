@@ -6,7 +6,7 @@ import FlightDetails from '../pages/FlightDetails.jsx';
 import Booking from '../pages/Booking.jsx';
 import Confirmation from '../pages/Confirmation.jsx';
 import MyBookings from '../pages/MyBookings.jsx';
-import Support from '../pages/Support.jsx'; // Fixed casing
+import Support from '../pages/Support.jsx'; // Ensure lowercase 'u'
 import NotFound from '../pages/NotFound.jsx';
 
 const router = createBrowserRouter([
@@ -15,38 +15,15 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: 'search',
-        element: <SearchResults />
-      },
-      {
-        path: 'flight/:id',
-        element: <FlightDetails />
-      },
-      {
-        path: 'booking',
-        element: <Booking />
-      },
-      {
-        path: 'confirmation',
-        element: <Confirmation />
-      },
-      {
-        path: 'bookings',
-        element: <MyBookings />
-      },
-      {
-        path: 'support',
-        element: <Support />
-      },
-      // REMOVED DUPLICATE SEARCH ROUTE
+      { index: true, element: <Home /> },
+      { path: 'search', element: <SearchResults /> },
+      { path: 'flight/:id', element: <FlightDetails /> },
+      { path: 'booking', element: <Booking /> },
+      { path: 'confirmation', element: <Confirmation /> },
+      { path: 'bookings', element: <MyBookings /> },
+      { path: 'support', element: <Support /> }
     ]
   }
 ]);
 
-// Add at the end of src/routes/index.jsx
 export default router;

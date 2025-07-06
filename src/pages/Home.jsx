@@ -104,7 +104,7 @@ const Home = () => {
     }
   ];
   // At the top of your return statement
-<ParallaxBackground />
+
 
   return (
     <div className="min-h-screen relative overflow-hidden">

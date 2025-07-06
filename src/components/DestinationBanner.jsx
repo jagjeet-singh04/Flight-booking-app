@@ -1,5 +1,5 @@
 // src/components/DestinationBanner.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef , useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
@@ -32,17 +32,30 @@ const DestinationBanner = () => {
     };
   }, [currentIndex, autoScroll]);
 
-  const nextSlide = () => {
+ const nextSlide = useCallback(() => {
     setCurrentIndex(prevIndex => 
       prevIndex === destinations.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [destinations.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex(prevIndex => 
       prevIndex === 0 ? destinations.length - 1 : prevIndex - 1
     );
-  };
+  }, [destinations.length]);
+   useEffect(() => {
+    if (autoScroll) {
+      timerRef.current = setTimeout(() => {
+        nextSlide();
+      }, 2000);
+    }
+    
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, [currentIndex, autoScroll, nextSlide]); // Added nextSlide to dependencies
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
