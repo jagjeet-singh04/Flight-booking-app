@@ -48,4 +48,5 @@ const router = createBrowserRouter([
   }
 ]);
 
-export default router;
+// Add at the end of src/routes/index.jsx
+export { router as default };
