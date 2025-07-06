@@ -9,8 +9,7 @@ export default defineConfig({
     resolve: {
        extensions: ['.js', '.jsx', '.ts', '.tsx'], // add .jsx if not there
     alias: {
-      // Add this alias to fix path resolution
-      '@routes': '/src/routes'
+       '@': '/src'
     }
   }
 })
